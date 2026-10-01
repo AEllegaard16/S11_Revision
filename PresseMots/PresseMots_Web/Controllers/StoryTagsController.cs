@@ -32,7 +32,7 @@ namespace PresseMots.Controllers
 
 
             ViewData["TagId"] = new SelectList(_context.Tags, "Id", "Name");
-            return View(); //METTRE le modèle adéquat! Pour la correspondance, utilisez storyId pour la première relation et la liste pour la deuxième. 
+            return View(new StoryTag() {StoryId = storyId}); //METTRE le modèle adéquat! Pour la correspondance, utilisez storyId pour la première relation et la liste pour la deuxième. 
         }
 
 
