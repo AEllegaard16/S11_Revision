@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PresseMots.Models.Data;
 
@@ -11,9 +12,11 @@ using PresseMots.Models.Data;
 namespace PresseMots.Migrations
 {
     [DbContext(typeof(PresseMotsDbContext))]
-    partial class PresseMotsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20261001202031_Tag_StoryTag_DbSet")]
+    partial class Tag_StoryTag_DbSet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

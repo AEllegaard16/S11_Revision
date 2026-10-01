@@ -19,7 +19,7 @@ namespace PresseMots.Controllers
             _context = context;
         }
 
-        /*
+        
   
         public async Task<IActionResult> Create(int storyId)
         {
@@ -32,7 +32,7 @@ namespace PresseMots.Controllers
 
 
             ViewData["TagId"] = new SelectList(_context.Tags, "Id", "Name");
-            return View();-- METTRE le modèle adéquat! Pour la correspondance, utilisez storyId pour la première relation et la liste pour la deuxième. 
+            return View(); //METTRE le modèle adéquat! Pour la correspondance, utilisez storyId pour la première relation et la liste pour la deuxième. 
         }
 
 
@@ -44,7 +44,7 @@ namespace PresseMots.Controllers
             {
                 _context.Add(storyTag);
                 await _context.SaveChangesAsync();
-        //On revient vers l'article.
+                //On revient vers l'article.
                 return RedirectToAction("Index", "Stories", new { Id = storyTag.StoryId});
             }
 
@@ -58,11 +58,6 @@ namespace PresseMots.Controllers
             ViewData["TagId"] = new SelectList(_context.Tags, "Id", "Name", storyTag.TagId);
             return View(storyTag);
         }
-
-      
-
-      
-
 
         public async Task<IActionResult> Delete(int? id)
         {
@@ -79,7 +74,6 @@ namespace PresseMots.Controllers
 
             return View(storyTag);
         }
-
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -99,7 +93,5 @@ namespace PresseMots.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index), "Stories", new { Id=storyId});
         }
-
-  */
     }
 }
